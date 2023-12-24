@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="UTF-8">
+<head>
+    <title>Удаление параметра налога на автомобиль</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+<h1>Удаление параметра налога на автомобиль</h1>
+<form action="/v1/car/tax-param/delete" method="post">
+
+    <label for="code_rate">Код:</label>
+    <input type="text" name="code_rate" id="code_rate" required><br><br>
+
+    <button type="submit" class="btn btn-primary" style=background-color:red >Удалить</button>
+</form>
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+</body>
+</html>

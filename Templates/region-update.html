@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <meta charset="UTF-8">
+    <head>
+        <title>Обновление региона</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>Обновление региона</h1>
+        <form method="post" action="/v1/region/update">
+
+            <label for="region_code">Номер региона:</label>
+            <input type="text" name="region_code" id="region_code"><br><br>
+
+            <label for="name">Название региона:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <button type="submit" class="btn btn-primary" >Обновить</button>
+        </form>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+    </body>
+</html>
